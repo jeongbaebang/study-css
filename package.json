@@ -1,0 +1,22 @@
+{
+  "name": "study-css",
+  "version": "0.0.1",
+  "description": "css와 관련된 공부를 정리하고 응용해 보는 저장소입니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeongbaebang/study-css.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "jeongbaebang_dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeongbaebang/study-css/issues"
+  },
+  "homepage": "https://github.com/jeongbaebang/study-css#readme"
+}
