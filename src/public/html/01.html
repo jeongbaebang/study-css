@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/01.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>01.html</h1>
+    <hr />
+    <div class="grid">
+      <nav>
+        <a href="/src/index.html">index.html</a>
+      </nav>
+      <section>
+        <article class="a1">
+          <h1>css란 무엇인가?</h1>
+          <p>
+            CSS(Cascading Style Sheets)는 HTML이나 XML과 같은 구조화 된 문서(Document)를 화면, 종이
+            등에 어떻게 렌더링할 것인지를 정의하기 위한 언어이다.
+          </p>
+          <p>
+            셀렉터는 스타일을 적용하고자 하는 HTML 요소를 선택하기 위해 CSS에서 제공하는 수단이다.
+            <br />
+            셀렉터로 HTML 요소를 선택하고 {} 내에 프로퍼티(속성)와 값을 지정하는 것으로 다양한
+            style을 정의할 수 있다. 프로퍼티는 표준 스펙으로 이미 지정되어 있는 것을 사용하여야하며
+            사용자가 임의로 정의할 수 없다.
+          </p>
+          <p>가상 클래스는 요소의 특정 상태에 따라 스타일을 정의할 때 사용된다.</p>
+        </article>
+        <hr />
+        <article class="a2">
+          <div>
+            <h3 class="style-tag">부정셀렉터 사용예</h3>
+            <div class="test-not">1</div>
+            <div class="test-not">2</div>
+            <div class="test-not">3</div>
+            <div class="test-not">4</div>
+            <div class="test-not">5</div>
+            <div class="test-not">6</div>
+          </div>
+        </article>
+        <hr />
+        <article class="a3">
+          <p>px은 절대값이고 em, %는 상대값</p>
+          <p>
+            %는 백분률 단위의 상대 단위이다. 요소에 지정된 사이즈(상속된 사이즈나 디폴트 사이즈)에
+            상대적인 사이즈를 설정한다.
+          </p>
+          <p>
+            em은 배수(倍數) 단위로 상대 단위이다. 요소에 지정된 사이즈(상속된 사이즈나 디폴트
+            사이즈)에 상대적인 사이즈를 설정한다. <br />
+            중첩된 자식 요소에 em을 지정하면 모든 자식 요소의 사이즈에 영향을 미치기 때문에
+            주의하여야 한다.
+          </p>
+          <p>rem은 최상위 요소(html)의 사이즈를 기준으로 삼는다. rem의 r은 root를 의미한다.</p>
+          <div class="container"></div>
+          <p>
+            Reset CSS를 사용하여 사전에 html 요소의 font-size 지정이 필요하다. font-size 미지정
+            시에는 16px가 적용된다.
+          </p>
+          <p>Viewport 단위는 상대적인 단위로 viewport를 기준으로 한 상대적 사이즈를 의미한다.</p>
+        </article>
+        <hr />
+        <article class="a4">
+          <p>Box는 콘텐트(Content), 패딩(Padding), 테두리(Border), 마진(Margin)로 구성된다.</p>
+          <div class="container"></div>
+          <p>width와 height 프로퍼티는 콘텐츠 영역을 대상으로 한다.</p>
+          <p>
+            만일 width와 height로 지정한 콘텐츠 영역보다 실제 콘텐츠가 크면 콘텐츠 영역을 넘치게
+            된다는 것에 유의하여야 한다.
+          </p>
+          <p>
+            width와 height 프로퍼티의 초기값은 auto로써 이것은 브라우저가 상황에 따라 적당한 width와
+            height 값을 계산할 것을 의미한다.
+          </p>
+          <p>
+            block 요소의 경우, width는 부모 요소의 100%, height는 콘텐츠의 높이(+ 약간의 여분)가
+            지정된다.
+          </p>
+          <div>명시적으로 width와 height를 지정하기 위해서는 px, % 등의 크기 단위를 사용한다.</div>
+          <p>
+            width와 height 프로퍼티를 비롯한 모든 박스모델 관련 프로퍼티(margin, padding, border,
+            box-sizing 등)는 상속되지 않는다.
+          </p>
+          <p>
+            margin 프로퍼티에 auto 키워드를 설정하면 해당 요소를 브라우저 중앙에 위치 시킬 수 있다.
+            대신 길이값을 부여해야한다.
+          </p>
+          <div class="center">center</div>
+
+          <div class="use-max-width">
+            <p>
+              요소 너비가 브라우저 너비보다 크면 가로 스크롤바가 만들어진다. 이 문제를 해결하기
+              위해서 max-width 프로퍼티를 사용할 수 있다.
+            </p>
+          </div>
+          <p>
+            max-width 프로퍼티를 사용하면 브라우저 너비가 요소의 너비보다 좁아질 때 자동으로 요소의
+            너비가 줄어든다.
+          </p>
+          <p style="border-radius: 20px">
+            border-radius 프로퍼티는 테두리 모서리를 둥글게 표현하도록 지정한다.
+          </p>
+          <p>box-sizing 프로퍼티는 width, height 프로퍼티의 대상 영역을 변경할 수 있다.</p>
+          <p>
+            border-box로 지정하면 마진을 제외한 박스 모델 전체를 width, height 프로퍼티의 대상
+            영역으로 지정이 가능하여 보다 직관적으로 사용이 가능하다.
+          </p>
+        </article>
+        <hr />
+        <article class="a5">
+          <p>display 프로퍼티는 layout 정의에 자주 사용되는 프로퍼티이다.</p>
+          <p>
+            CSS를 적용하지 않아도 기본적으로 브라우저에 표현되는 디폴트 표시값을 가지는데, html
+            요소는 block or inline 특성을 갖는다.
+            <strong>display 프로퍼티는 상속되지 않는다.</strong>
+          </p>
+          <h4>block 레벨 요소</h4>
+          <ul>
+            <li>항상 새로운 라인에서 시작한다.</li>
+            <li>화면 크기 전체의 가로폭을 차지한다. (width: 100%)</li>
+            <li>width, height, margin, padding 프로퍼티 지정이 가능하다.</li>
+            <li>block 레벨 요소 내에 inline 레벨 요소를 포함할 수 있다</li>
+          </ul>
+          <h4>inline 레벨 요소</h4>
+          <ul>
+            <li>줄을 바꾸지 않고 다른 요소와 함께 한 행에 위치한다.</li>
+            <li>content의 너비만큼 가로폭을 차지한다.</li>
+            <li>inline 레벨 요소 내에 block 레벨 요소를 포함할 수 없다.</li>
+            <li>
+              width, height, margin-top, margin-bottom 프로퍼티를 지정할 수 없다. 상, 하 여백은
+              line-height로 지정한다.
+            </li>
+            <li>inline 레벨 요소는 일반적으로 block 레벨 요소에 포함되어 사용된다.</li>
+          </ul>
+          <span>1</span>
+          <span style="line-height: 20px">2</span>
+          <div>3</div>
+          <div>4</div>
+          <div><span>5</span><span>6</span></div>
+          <h4>inline-block 레벨 요소</h4>
+          <p>
+            block과 inline 레벨 요소의 특징을 모두 갖는다. inline 레벨 요소와 같이 한 줄에
+            표현되면서 width, height, margin 프로퍼티를 모두 지정할 수 있다.
+          </p>
+          <span style="display: inline-block">1</span> <span style="display: inline-block">2</span>
+          <span style="display: inline-block">3</span>
+          <ul>
+            <li>content의 너비만큼 가로폭을 차지한다.</li>
+          </ul>
+          <h4>visibility 프로퍼티는 요소의 렌더링 여부를 결정한다.</h4>
+          <p>
+            display: none;은 해당 요소의 공간까지 사라지게 하지만 visibility: hidden;은 해당 요소의
+            공간은 사라지지 않고 남아있게 된다.
+          </p>
+          <p>
+            opacity 프로퍼티는 요소의 투명도를 정의한다. 0.0 ~ 1.0의 값을 입력하며 0.0은 투명, 1.0은
+            불투명을 의미한다.
+          </p>
+          <div class="opacity"></div>
+        </article>
+        <article class="a6">
+          <h4>background property</h4>
+          <p>
+            설정된 이미지의 크기가 화면보다 작으면 자동으로 이미지가 반복 출력되어 화면을 채우게
+            된다. 이것은 background-repeat 프로퍼티의 기본값이 repeat이기 때문이다.
+          </p>
+          <p>
+            배경 이미지의 고유 비율을 유지하기 때문에 설정에 따라 이미지의 일부가 보이지 않을 수
+            있다.
+          </p>
+          <h4>background-attachment 프로퍼티</h4>
+          <p>
+            화면이 스크롤되더라도 배경이미지는 스크롤되지 않고 고정되어 있게 하려면
+            background-attachment 프로퍼티에 fixed 키워드를 지정한다.
+          </p>
+          <h4>line-height 프로퍼티</h4>
+          <p>텍스트의 높이를 지정한다. 텍스트 수직 정렬에도 응용되어 사용된다.</p>
+          <p>
+            수직 중앙 정렬 하려면, a 요소의 line-height 값과 a 요소를 감싸는 div 요소의 height 값을
+            일치시킨다.
+          </p>
+          <h4>text-align 프로퍼티</h4>
+          <p>
+            a 요소에 대한 중앙 정렬은 적용되지 않는데, a 요소는 inline 요소이기 때문이다.nline
+            요소는 width 프로퍼티가 없으므로 중앙 개념이 존재하지 않는다.
+          </p>
+          <p>a 요소에 display: block;을 지정한다면 중앙 정렬이 가능할 것이다.</p>
+          <a href="">나를 중앙에</a>
+          <a href="" style="display: block; text-align: center">나를 중앙에</a>
+        </article>
+        <article>
+          <p>
+            <a
+              href="https://poiemaweb.com/css3-font-text#10-text-overflow-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0"
+              >다음 학습링크</a
+            >
+          </p>
+        </article>
+      </section>
+    </div>
+  </body>
+  <script></script>
+</html>

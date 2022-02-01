@@ -1,0 +1,102 @@
+html {
+  box-sizing: border-box;
+  font-size: 17px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.grid {
+  width: 800px;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+}
+
+.grid nav {
+  width: 100px;
+  background-color: pink;
+}
+
+.grid p {
+  width: 80%;
+  background-color: aquamarine;
+}
+
+.a2 {
+  height: 500px;
+}
+.a2 .test-not {
+  float: left;
+  width: 32%;
+  height: 200px;
+  background-color: red;
+  /* margin-bottom: 2%; */
+  color: #fff;
+  font-size: 3em;
+  line-height: 200px;
+  text-align: center;
+}
+
+div.test-not:not(:nth-of-type(n + 4)) {
+  background-color: hotpink;
+  margin-bottom: 2%;
+}
+
+div.test-not:not(:nth-of-type(3n + 1)) {
+  background-color: blueviolet;
+  margin-left: 2%;
+}
+.style-tag::before {
+  content: '<';
+}
+.style-tag::after {
+  content: '/>';
+}
+.style-tag::selection {
+  background: white;
+  color: white;
+}
+article.a3 :first-child {
+  font-size: 20px;
+  padding: 2em;
+  background-color: crimson;
+}
+article.a3 .container {
+  /* 14* 70 = 980px */
+  width: 70rem;
+  height: 30px;
+  background-color: tan;
+}
+
+article.a4 .container {
+  width: 30px;
+  padding: 30px;
+  border: 3px solid pink;
+  margin: 30px;
+}
+article.a4 div {
+  width: 200px;
+  height: auto;
+  background-color: rgba(216, 140, 19, 0.308);
+}
+article.a4 div.center {
+  width: 600px;
+  margin: 0 auto;
+}
+article.a4 div.use-max-width {
+  max-width: 600px;
+  margin: 0 auto;
+}
+article.a5 .opacity {
+  width: 200px;
+  height: 200px;
+  opacity: 0.5;
+  background-color: powderblue;
+  transition: opacity 1s;
+}
+
+article.a5 div.opacity:hover {
+  opacity: 1;
+}
