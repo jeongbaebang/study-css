@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/02.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>02.html</h1>
+    <hr />
+
+    <section>
+      <article class="a1">
+        <h4>text-overflow 프로퍼티</h4>
+        <p>
+          부모 영역을 벗어난 wrapping(자동줄바꿈)이 되지 않은 텍스트의 처리 방법을 정의한다. 이
+          프로퍼티를 사용하기 위해서는 아래의 조건이 필요하다.
+        </p>
+        <ul>
+          <li>
+            width 프로퍼티가 지정되어 있어야 한다. 이를 위해 필요할 경우 block 레벨 요소로
+            변경하여야 한다.
+          </li>
+          <li>자동 줄바꿈을 방지하려면 white-space 프로퍼티를 nowrap으로 설정한다.</li>
+          <li>overflow 프로퍼티에 반드시 “visible” 이외의 값이 지정되어 있어야 한다.</li>
+        </ul>
+
+        <div class="truncate">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur possimus sequi
+          laudantium atque veritatis dolore voluptatem tempore quos est nam corrupti quam cupiditate
+          id, nulla maiores in praesentium aliquid quo.
+        </div>
+
+        <h4>word-wrap 프로퍼티</h4>
+        <p>한 단어의 길이가 길어서 부모 영역을 벗어난 텍스트의 처리 방법을 정의한다.</p>
+        <div class="word-wrap">
+          Floccinaucinihilipilification https://poiemaweb.com/css3-font-text
+        </div>
+      </article>
+      <article class="a2">
+        <h4>position 프로퍼티</h4>
+        <p>
+          position 프로퍼티는 요소의 위치를 정의한다. top, bottom, left, right 프로퍼티와 함께
+          사용하여 위치를 지정.
+        </p>
+        <h5>static 기본위치</h5>
+        <p>static은 position 프로터의 기본값으로 position 프로퍼티를 지정하지 않았을 때와 같다.</p>
+        <p>
+          좌표 프로퍼티(top, bottom, left, right)를 같이 사용할 수 없으며 사용할 경우에는 무시된다.
+        </p>
+        <p></p>
+        <div class="contant">
+          <div class="box1"></div>
+        </div>
+        <h5>relative 상대위치</h5>
+        <p>
+          static을 선언한 요소와 relative를 선언한 요소의 차이점은 좌표 프로퍼티의 동작 여부뿐이며
+          그외는 동일하게 동작한다.
+        </p>
+        <div class="contant">
+          <div class="box2"></div>
+          <div class="box3"></div>
+        </div>
+        <h5>absolute 절대위치</h5>
+        <p>
+          만일 부모 또는 조상 요소가 static인 경우, document body를 기준으로 하여 좌표 프로퍼티대로
+          위치하게 된다.
+        </p>
+        <p>
+          따라서 부모 요소를 배치의 기준으로 삼기 위해서는 부모 요소에 relative를 정의하여야 한다.
+        </p>
+        <h5>fixed 고정위치</h5>
+        <p>
+          부모 요소와 관계없이 브라우저의 viewport를 기준으로 좌표프로퍼티을 사용하여 위치를
+          이동시킨다.
+        </p>
+        <p>
+          스크롤이 되더라도 화면에서 사라지지 않고 항상 같은 곳에 위치한다. fixed 프로퍼티 선언 시,
+          block 요소의 width는 inline 요소와 같이 content에 맞게 변화되므로 적절한 width를
+          지정하여야 한다.
+        </p>
+        <div class="fixed-box sidebar">
+          <nav>
+            <a href="/src/index.html">index.html</a>
+          </nav>
+        </div>
+
+        <h5>z-index 프로퍼티</h5>
+        <p>
+          z-index 프로퍼티에 큰 숫자값을 지정할수록 화면 전면에 출력된다. positon 프로퍼티가 static
+          이외인 요소에만 적용된다.
+        </p>
+        <h5>overflow 프로퍼티</h5>
+        <p>overflow 프로퍼티는 자식 요소가 부모 요소의 영역를 벗어났을 때 처리 방법을 정의한다.</p>
+      </article>
+      <article class="a3">
+        <h4>float 프로퍼티</h4>
+        <p>
+          float 프로퍼티는 주로 레이아웃을 구성할 때 블록 레벨 요소를 가로 정렬하기 위해 사용되는
+          중요한 기법이다.
+        </p>
+        <p>flexbox 레이아웃을 지원하지 않는 IE를 고려해야 한다면 float 프로퍼티를 사용해야 한다.</p>
+        <p>flexbox 레이아웃을 지원하는 플랫폼은 flexbox 사용</p>
+        <p>float 프로퍼티는 이미지 주위를 텍스트로 감싸기 위해 만들어진 것이다.</p>
+        <p>
+          float 프로퍼티를 사용할 때 요소의 위치를 고정시키는 position 프로퍼티의 absolute를
+          사용하면 안된다.
+        </p>
+        <p>
+          width 프로퍼티의 기본값은 100%이므로 width 프로퍼티값을 지정하지 않은 block 요소는 부모
+          요소의 가로폭을 가득 채운다.
+        </p>
+        <p>
+          float 프로퍼티 대신 display: inline-block;을 선언하는 것이다. 주의해야야 점은 inline-block
+          프로퍼티 요소를 연속 사용하는 경우, 두 요소 사이에 정의하지 않은 공백(4px)가 자동 지정되는
+          것이다.
+        </p>
+        <p>공백(4px)이 자동 지정되어 부모 요소의 width를 초과하여 가로 정렬이 되지 않았다.</p>
+        <p>
+          이 현상을 회피하기 위해 부모 요소에 font-size: 0;을 선언하여 두 요소 사이에 정의하지 않은
+          공백을 제거한다.
+        </p>
+      </article>
+    </section>
+  </body>
+  <script></script>
+</html>

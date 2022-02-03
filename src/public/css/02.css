@@ -1,0 +1,72 @@
+.truncate {
+  width: 150px; /* width가 지정되어 있어야 한다. */
+  white-space: nowrap; /* 자동 줄바꿈을 방지 */
+  overflow: hidden; /* 반드시 "visible" 이외의 값이 지정되어 있어야 한다. */
+  text-overflow: ellipsis; /* ellipsis or clip */
+}
+.word-wrap {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  margin: 40px;
+  border-radius: 6px;
+  border-color: gray;
+  border-style: dotted;
+  word-wrap: break-word;
+}
+
+.contant {
+  width: 300px;
+  height: 300px;
+  border-radius: 50px;
+  background-color: powderblue;
+  position: relative;
+}
+
+.contant .box1 {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  position: static;
+}
+.contant .box2 {
+  width: 100px;
+  height: 100px;
+  background-color: azure;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  z-index: 1;
+}
+.contant .box3 {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  position: absolute;
+  top: 110px;
+  left: 55px;
+  z-index: 2;
+}
+
+.fixed-box {
+  position: fixed;
+  color: burlywood;
+  font-weight: bold;
+  text-align: center;
+  background-color: aqua;
+}
+.sidebar {
+  width: 50px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding-top: 100px;
+}
+.footer {
+  width: 200px;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  line-height: 50px;
+}
